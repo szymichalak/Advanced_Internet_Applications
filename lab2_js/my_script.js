@@ -18,7 +18,7 @@ function add_book(){
     var newCell_2  = newRow.insertCell(1);
     var newCell_3  = newRow.insertCell(2);
 
-    // create inputs fields 
+    // create input fields 
     var input_author = document.createElement("input")
     input_author.type = "text";
     input_author.id = "author" + rowCount;
@@ -42,27 +42,8 @@ function add_book(){
     button_remove.id = "remove" + rowCount;
     button_remove.innerHTML = "Remove"
     button_remove.setAttribute('onclick', 'remove_function('+ rowCount +')');
-    newCell_3.appendChild(button_remove);
-    // button_remove.onclick = function(){
-    //     tableRef.deleteRow(rowCount);
-
-    //     var table = document.getElementById("table_body");
-    //     for (var i = 0, row; row = table.rows[i]; i++) {
-    //         row.id = "tr"+i;
-    //         if(i % 2 == 0){
-    //             row.className = "gray";
-    //         }
-    //         else{
-    //             row.className = "white"
-    //         }
-    //         // for(child of row.children){
-    //         //     alert(child.children.id)
-    //         // }
-    //     }
-    // }
-    
+    newCell_3.appendChild(button_remove);    
 }
-
 
 function save_function(row){
     // get values
@@ -88,8 +69,8 @@ function save_function(row){
     current_button.setAttribute('onclick', 'edit_function('+ row +')');
 }
 
-
 function edit_function(row){
+    // get current values
     var current_author = document.getElementById("table_body").rows[row].cells[0].innerHTML;
     var current_title = document.getElementById("table_body").rows[row].cells[1].innerHTML;
 
@@ -113,7 +94,6 @@ function edit_function(row){
     current_button.innerHTML = "Save";
     current_button.id = "save"+row;
     current_button.setAttribute('onclick', 'save_function('+ row +')');
-
 }
 
 function next_save(row){
@@ -125,7 +105,20 @@ function next_save(row){
 }
 
 function remove_function(row){
+    // delete every cell in selected row and mark it as removed
     for(let i=0; i<3; i++){
         document.getElementById("table_body").rows[row].cells[0].remove();
+    }
+    document.getElementById("table_body").rows[row].className = "removed";
+
+    // update colors
+    var colors = ["gray", "white"];
+    var current_color = colors[0];
+    var table = document.getElementById("table_body");
+    for (var j = 0, row; row = table.rows[j]; j++) {
+        if (row.className != "removed"){
+            row.className = current_color;
+            current_color = colors[1 - colors.indexOf(current_color)];
+        }
     }
 }

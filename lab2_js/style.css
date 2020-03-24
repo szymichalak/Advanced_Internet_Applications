@@ -1,20 +1,20 @@
-table, th, td {
-    border: 1px solid black;
-  }
+/* borders of table */
+/* table, th, td {
+  border: 1px solid black;
+} */
 
-  /* #tr1, #tr3, #tr5, #tr7, #tr9 {
-    background-color: rgb(255, 255, 255);
-  }
+th{
+  width: 33.3%;
+}
 
+.gray {
+  background-color: rgb(207, 195, 195);
+}
 
-  #tr0, #tr2, #tr4, #tr6, #tr8{
-    background-color: rgb(207, 195, 195);
-  } */
+.white{
+  background-color: rgb(255, 255, 255);
+}
 
-  .gray {
-    background-color: rgb(207, 195, 195);
-  }
-
-  .white{
-    background-color: rgb(255, 255, 255);
-  }
+.removed{
+  display: inline;
+}
