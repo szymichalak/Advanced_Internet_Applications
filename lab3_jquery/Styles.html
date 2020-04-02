@@ -17,6 +17,9 @@
                 $('#toggle').toggleClass('asdf');
             });
             $('tr:even').addClass('asdf');
+
+            // task 9
+            $('ol.a li.b:not(:has(a))').addClass('asdf');
         });
     </script>
     <link rel="stylesheet" href="style.css">
@@ -46,6 +49,13 @@
     <div><button>Text A</button><button>Text B</button><span id="classic">Adding/removing
             class</span></div>
     <div><button>Text C</button><span id="toggle">Toggling class</span></div>
+    <br>
+    <br>
+    <ol class="a">
+        <li class="b"><a href="">Class b with link</a></li>
+        <li class="c"><a href="">Class c with link</a></li>
+        <li class="b">class b without link</li>
+    </ol>
 </body>
 
 </html>
