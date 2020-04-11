@@ -1,0 +1,28 @@
+.title{
+    position: relative;
+    bottom: 16px;
+    display: inline-block;
+    /* width: 10%; */
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin: 15px;
+}
+
+.up {
+    display: inline-block;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    margin-right: 15px;
+}
+
+.down {
+    display: inline-block;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+
+.row{
+    text-align: center;
+    height: 50px;
+}

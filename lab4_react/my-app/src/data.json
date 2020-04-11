@@ -1,0 +1,25 @@
+{
+    "cars": [
+        {
+        "id": "ccc33586-278b-4ba4-8ea0-2b7488523f48",
+        "mark": "Porsche",
+        "model": "911",
+        "photo": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2021-porsche-911-turbo-s-126-1583163451.jpg?crop=0.697xw:0.784xh;0.192xw,0.141xh&resize=640:*",
+        "rating": 3
+        },
+        {
+        "id": "64d83b20-7dec-4eac-b10d-03cc941530d9",
+        "mark": "Ferrari",
+        "model": "California",
+        "photo": "https://zycietoprzygoda.pl/pol_pl_Jazda-Ferrari-California-6645_1.jpg",
+        "rating": 5
+        },
+        {
+        "id": "ccaa864a-ae15-48dd-8e9c-2482f5d85836",
+        "mark": "Lamborghini",
+        "model": "Gallardo",
+        "photo": "https://katalogmarzen.pl/img/products/2/2019_09/auto-lamborghini-gallardo-na-specjalnym-torze-jpg.jpg",
+        "rating": 2
+        }
+    ]
+}

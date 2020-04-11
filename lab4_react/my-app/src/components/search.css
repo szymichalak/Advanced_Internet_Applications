@@ -1,0 +1,16 @@
+.search_btn{
+    display: inline-block;
+}
+
+.search_input{
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+}
+
+.search_div{
+    height: 50px;
+    position: absolute; 
+    top: 120px;
+
+}
