@@ -1,0 +1,381 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin: 0px 0px 0px 0px;
+}
+
+.footer {
+  color: black;
+  background-color: #c3f095;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-top: black;
+  border-width: 2px 0px 0px 0px;
+  border-style: solid;
+}
+
+p {
+  text-align: justify;
+  margin: 15px 15px 15px 15px;
+}
+
+.footer #footer_name {
+  text-align: center;
+}
+
+* {
+  font-size: 16px;
+}
+
+.article li {
+  list-style-type: none;
+  display: inline;
+}
+
+.article li div {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  margin: 15px 15px 15px 15px;
+}
+
+.article {
+  padding: 0px 0px 0px 0px;
+}
+
+.all {
+  position: relative;
+  background-color: #c3f095;
+}
+
+.para {
+  margin-top: 50px;
+}
+
+.small_header, #small_header_3, #small_header_2, #small_header_1 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 0px 0px 0px 0px;
+  width: 200px;
+  border-top: 0px;
+  border-right: 0px;
+  text-align: center;
+  font-size: 24px;
+}
+
+#small_header_1 {
+  background-color: #199ff8;
+}
+
+#small_header_2 {
+  background-color: #ff7b00;
+}
+
+#small_header_3 {
+  background-color: #fa39ca;
+}
+
+/* Mobile */
+@media only screen and (max-width: 599px) {
+  .header {
+    height: 100px;
+    width: auto;
+    /* background-color: lawngreen; */
+  }
+
+  .fill {
+    display: inline-block;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url("lfc.png");
+    height: 100px;
+    width: 100px;
+  }
+
+  .page_title {
+    display: inline-block;
+    width: 55%;
+    /* position: relative;
+    bottom: 30px;
+    left: 5%; */
+    visibility: hidden;
+  }
+
+  .dropdown {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: 20px;
+    margin-right: 75px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Dropdown Button */
+  .dropbtn {
+    background-color: inherit;
+    padding: 16px;
+    border: none;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: auto;
+    left: -35px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:active .dropbtn {
+    background-color: #3e8e41;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .article li .div_1row {
+    margin: 0px 30px 30px 30px;
+  }
+
+  .article li .div_2row {
+    margin: 0px 30px 30px 30px;
+  }
+}
+/* Tablet */
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .header {
+    height: 150px;
+    width: auto;
+    /* background-color: lawngreen; */
+  }
+
+  .fill {
+    display: inline-block;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url("lfc.png");
+    height: 150px;
+    width: 150px;
+  }
+
+  .page_title {
+    display: inline-block;
+    width: 55%;
+    position: relative;
+    bottom: 50%;
+    left: 10%;
+    font-size: 32px;
+  }
+
+  .dropdown {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: 20px;
+    margin-right: 75px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Dropdown Button */
+  .dropbtn {
+    background-color: inherit;
+    padding: 16px;
+    border: none;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: auto;
+    left: -35px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:active .dropbtn {
+    background-color: #3e8e41;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .article .div_2row {
+    display: inline;
+    margin: 0px 0px 0px 0px;
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  .article .art_x {
+    display: inline-flex;
+    width: calc(50% - 45px);
+  }
+
+  .article .art_1 .div_1row {
+    margin: 0px 30px 30px 30px;
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  .left {
+    margin-right: 15px;
+    margin-left: 30px;
+  }
+
+  .right {
+    margin-left: 15px;
+    margin-right: 30px;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  .header {
+    height: 200px;
+    width: auto;
+    /* background-color: lawngreen; */
+  }
+
+  .fill {
+    display: inline-block;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url("lfc.png");
+    height: 200px;
+    width: 200px;
+  }
+
+  .page_title {
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    bottom: 50%;
+    left: 10%;
+    font-size: 32px;
+  }
+
+  div.dropdown * {
+    display: inline;
+  }
+
+  .dropdown {
+    display: inline;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .dropbtn {
+    visibility: hidden;
+  }
+
+  .dropdown-content {
+    position: relative;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+
+  ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .article .art_1 {
+    display: inline-flex;
+    width: calc(33.33% - 45px);
+    margin: 0px 15px 30px 30px;
+    flex: 1;
+    /* additionally, equal width */
+  }
+
+  .article .left {
+    display: inline-flex;
+    width: calc(33.33% - 30px);
+    margin: 0px 15px 30px 15px;
+    flex: 1;
+    /* additionally, equal width */
+  }
+
+  .article .right {
+    display: inline-flex;
+    width: calc(33.33% - 45px);
+    margin: 0px 30px 30px 15px;
+    flex: 1;
+    /* additionally, equal width */
+  }
+
+  .article .all {
+    margin: 0px 0px 8px 0px;
+  }
+
+  .article {
+    display: flex;
+    /* equal height of the children */
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,297 @@
+@import 'import_file';
+
+
+$space-size: 30px;
+$font-size: 16px;
+$small-header-width: 200px;
+
+
+/* Mobile */
+@media only screen and (max-width: 599px) {
+
+    .header {
+      height: 100px;
+      width: auto;
+      /* background-color: lawngreen; */
+    }
+  
+    .fill {
+      display: inline-block;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-image: url("lfc.png");
+      height: 100px;
+      width: 100px;
+    }
+  
+    .page_title {
+      display: inline-block;
+      width: 55%;
+      /* position: relative;
+      bottom: 30px;
+      left: 5%; */
+      visibility: hidden;
+    }
+  
+    .dropdown {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      margin-top: 20px;
+      margin-right: 75px;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    /* Dropdown Button */
+    .dropbtn {
+        background-color:inherit;
+        padding: 16px;
+        border: none;
+    }
+  
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: auto;
+        left: -35px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content li {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:active .dropbtn {background-color: #3e8e41;}
+    
+    ul{ 
+        list-style-type: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+  
+    .article li .div_1row{
+        margin: 0px $space-size $space-size $space-size;
+    }
+
+    .article li .div_2row{
+        margin: 0px $space-size $space-size $space-size;
+    }
+}
+  
+/* Tablet */
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  
+    .header {
+      height: 150px;
+      width: auto;
+      /* background-color: lawngreen; */
+    }
+  
+    .fill {
+      display: inline-block;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-image: url("lfc.png");
+      height: 150px;
+      width: 150px;
+    }
+  
+    .page_title {
+      display: inline-block;
+      width: 55%;
+      position: relative;
+      bottom: 50%;
+      left: 10%;
+      font-size: $font-size * 2;
+    }
+  
+    .dropdown {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      margin-top: 20px;
+      margin-right: 75px;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    /* Dropdown Button */
+    .dropbtn {
+        background-color:inherit;
+        padding: 16px;
+        border: none;
+        }
+    
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: auto;
+        left: -35px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content li {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:active .dropbtn {background-color: #3e8e41;}
+    
+    ul{ 
+        list-style-type: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .article .div_2row{
+        display: inline;
+        margin: 0px 0px 0px 0px;
+        border-width: 2px;
+        border-style: solid;
+    }
+
+    .article .art_x{
+        display: inline-flex;
+        width: calc(50% - #{$space-size*1.5});
+    }
+    
+    .article .art_1 .div_1row{
+        margin: 0px $space-size $space-size $space-size;
+        border-width: 2px;
+        border-style: solid;
+    }
+    
+    .left{
+        margin-right: $space-size/2;
+        margin-left: $space-size;
+    }
+    
+    .right{
+        margin-left: $space-size/2;
+        margin-right: $space-size;
+    } 
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  
+    .header {
+      height: 200px;
+      width: auto;
+      /* background-color: lawngreen; */
+    }
+  
+    .fill {
+      display: inline-block;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-image: url("lfc.png");
+      height: 200px;
+      width: 200px;
+    }
+  
+    .page_title {
+      display: inline-block;
+      width: 30%;
+      position: relative;
+      bottom: 50%;
+      left: 10%;
+      font-size: $font-size * 2;
+    }
+  
+    div.dropdown * {
+      display: inline;
+    }
+  
+    .dropdown {
+      display: inline;
+      position: absolute;
+      top: 20px;
+      right: 20px; 
+    }
+  
+    .dropbtn {
+      visibility: hidden;
+    }
+  
+    .dropdown-content{
+      position: relative;
+      margin-left: 0px;
+      padding-left: 0px;
+    }
+  
+    ul li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .article .art_1{
+        display: inline-flex;
+        width: calc(33.33% - #{$space-size * 1.5});
+        margin: 0px $space-size/2 $space-size $space-size;
+        flex: 1; /* additionally, equal width */
+    }
+    
+    .article .left{
+        display: inline-flex;
+        width: calc(33.33% - #{$space-size});
+        margin: 0px $space-size/2 $space-size $space-size/2;
+        flex: 1; /* additionally, equal width */
+    }
+    
+    .article .right{
+        display: inline-flex;
+        width: calc(33.33% - #{$space-size * 1.5});
+        margin: 0px $space-size $space-size $space-size/2;
+        flex: 1; /* additionally, equal width */
+    }
+    
+    .article .all{
+        margin: 0px 0px 8px 0px;
+    }
+
+    .article {
+        display: flex; /* equal height of the children */
+    }
+
+
+}
