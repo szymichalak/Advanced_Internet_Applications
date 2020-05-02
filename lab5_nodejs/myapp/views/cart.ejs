@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Your cart</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Cart</h1>
+    <div class="all_cars_cart">
+      <%if(cars){%>
+      <%for(var i=0;i<cars.length;i++){%>
+      <div class="car">
+        <div class="info-cart">Mark: <%= cars[i].mark %> </div><!--
+        --><div class="info-cart">Model: <%= cars[i].model %> </div><!--
+        --><div class="info-cart">Production year: <%= cars[i].production_year %> </div><!--
+        --><div class="info-cart">Engine power: <%= cars[i].engine_power %> </div><!--
+        --><div class="info-cart-del">
+          <form method="POST" action="/remove_from_cart">
+            <input hidden type="text" name="carID" value=<%= cars[i]._id %>>
+            <input hidden type="text" name="carMark" value=<%= cars[i].mark %>>
+            <input hidden type="text" name="carModel" value=<%= cars[i].model %>>
+            <input hidden type="text" name="carYear" value=<%= cars[i].production_year %>>
+            <input hidden type="text" name="carEngine" value=<%= cars[i].engine_power %>>
+            <input type="image" class="del_car" alt="del_car" src="/delete.png">
+          </form>
+        </div>
+      </div>
+      <br>
+      <%}%>
+      <%}%>
+    </div>
+    <a class="go_to" href="/"><img alt="home" src="/home.png" width="32" height="32"></a>
+   </div>
+    <div class="footer">
+      <div class="bottom">
+        <a class="btn" href="/purchase_all"><img alt="purchase" src="/checked.png" width="32" height="32"></a>
+        <p class="text_field">Order all items</p>
+      </div>
+  
+      <div class="bottom">
+        <a class="btn" href="/cancel_all"><img alt="cancel" src="/close.png" width="32" height="32"></a>
+        <p class="text_field">Cancel all items</p>
+      </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

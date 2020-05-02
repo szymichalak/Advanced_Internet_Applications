@@ -1,0 +1,8 @@
+if mongobd error occurs 
+MongoNetworkError: failed to connect to server [localhost:27017] on first connect [Error: connect ECONNREFUSED 127.0.0.1:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1141:16) {
+  name: 'MongoNetworkError',
+  [Symbol(mongoErrorContextSymbol)]: {}
+}]
+please type: sudo service mongod start
+then app will run properly

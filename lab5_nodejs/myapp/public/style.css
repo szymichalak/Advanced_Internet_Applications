@@ -1,0 +1,80 @@
+.info{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.info-cart{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    position: relative;
+    bottom: 10px;
+}
+
+.info-cart-del{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+
+}
+
+body {
+    width: 75%;
+    margin: auto;
+    background-color: rgb(158, 159, 160);
+}
+
+.go_to{
+    position: absolute;
+    top: 25px;
+    right: 25%;
+}
+
+.bottom {
+    display: inline-block;
+    margin-top: 50px;
+
+}
+
+.text_field{
+    width: 128px;
+}
+
+.btn{
+    position: relative;
+    left: 32px;
+}
+
+.footer{
+    width: 300px;
+    margin: auto;
+}
+
+.notification{
+    height: 50px;
+    text-align: center;
+}
+
+h1 {
+    background-color: rgb(247, 224, 196);
+    width: 20%;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.car{
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    margin-top: 5px;
+    border-radius: 30px;
+}
+
+.add_car{
+    background-color: rgb(247, 224, 196);
+    border-radius: 30px;
+    border-width: 0px;
+}

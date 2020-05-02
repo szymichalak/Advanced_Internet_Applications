@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Allegro v2</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Home page</h1>
+    <a href="/restart">Add cars for tests</a>
+    <% if (info) { %>
+      <div class="notification">
+          <%= info %>
+      </div>
+    <% } %>
+    <div class="all_cars">
+      <%for(var i=0;i<cars.length;i++){%>
+        <div class="car">
+          <div class="info">Mark: <%= cars[i].mark %> </div><!--
+          --><div class="info">Model: <%= cars[i].model %> </div><!--
+          --><div class="info">Production year: <%= cars[i].production_year %> </div><!--
+          --><div class="info">Engine power: <%= cars[i].engine_power %> </div><!--
+          --><div class="info">
+            <form  method="POST" action="/add_to_cart">
+                <input hidden type="text" name="carID"  value= <%= cars[i]._id %>>
+                <input hidden type="text" name="carMark"  value= <%= cars[i].mark %>>
+                <input hidden type="text" name="carModel"  value= <%= cars[i].model %>>
+                <input hidden type="text" name="carYear"  value= <%= cars[i].production_year %>>
+                <input hidden type="text" name="carEngine"  value= <%= cars[i].engine_power %>>
+                <button class="add_car">Add to cart</button>
+            </form>
+          </div>
+          <br></br>
+        </div>
+      <%}%>
+    </div>
+      <a class="go_to" href="/cart"><img alt="shopping_cart" src="/shopping_basket.png" width="32" height="32"></a>
+  </div>
+
+</body>
+</html>
