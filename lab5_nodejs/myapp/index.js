@@ -22,9 +22,11 @@ app.use((req,res,next)=>{
 })
 
 
+// mongoose.connect(url, {poolSize: 10, bufferMaxEntries: 0, reconnectTries: 5000, useNewUrlParser: true,useUnifiedTopology: true});
+
 // database init
 var MongoClient = require('mongodb').MongoClient
-MongoClient.connect('mongodb://localhost:27017/', function (err, client) {
+MongoClient.connect('mongodb://localhost:27017/', {poolSize: 10}, function (err, client) {
     if (err) throw err
 
     var db = client.db('store')

@@ -9,7 +9,7 @@ var car_added = false;
 
 router.get('/', (req, res) => {
     var MongoClient = require('mongodb').MongoClient
-    MongoClient.connect('mongodb://localhost:27017/', function (err, client) {
+    MongoClient.connect('mongodb://localhost:27017/', {poolSize: 10}, function (err, client) {
         if (err) throw err
 
         var db = client.db('store')
@@ -124,7 +124,7 @@ router.get('/purchase_all', (req, res) => {
     }
 
     var MongoClient = require('mongodb').MongoClient
-    MongoClient.connect('mongodb://localhost:27017/', function (err, client) {
+    MongoClient.connect('mongodb://localhost:27017/', {poolSize: 10}, function (err, client) {
         if (err) throw err
 
         var db = client.db('store')
@@ -156,7 +156,7 @@ router.get('/purchase_all', (req, res) => {
 
 router.get('/restart', (req, res) => {
     var MongoClient = require('mongodb').MongoClient
-    MongoClient.connect('mongodb://localhost:27017/', function (err, client) {
+    MongoClient.connect('mongodb://localhost:27017/', {poolSize: 10}, function (err, client) {
         if (err) throw err
 
         var db = client.db('store')
