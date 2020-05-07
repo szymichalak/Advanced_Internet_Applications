@@ -29,38 +29,38 @@ var MongoClient = require('mongodb').MongoClient
 MongoClient.connect('mongodb://localhost:27017/', {poolSize: 10}, function (err, client) {
     if (err) throw err
 
-    var db = client.db('store')
-    db.collection('cars').countDocuments().then((num)=>{
-        if(num===0){
-            console.log("Database has been created!")
-            db.collection('cars').insertMany([
-                {
-                    mark: 'Ford',
-                    model: 'Focus',
-                    production_year: '2005',
-                    engine_power: '150PS'
-                },
-                {
-                    mark: 'Mercedes',
-                    model: 'A169',
-                    production_year: '2012',
-                    engine_power: '112PS'
-                },
-                {
-                    mark: 'BMW',
-                    model: 'E46',
-                    production_year: '2009',
-                    engine_power: '173PS'
-                },
-                {
-                    mark: 'VW',
-                    model: 'Golf',
-                    production_year: '2015',
-                    engine_power: '103PS'
-                }
-            ])  
-        }
-    })
+    var db = client.db('store');
+
+    var add_cars_at_start = true;
+    if(add_cars_at_start){
+        db.collection('cars').insertMany([
+            {
+                mark: 'Ford',
+                model: 'Focus',
+                production_year: '2005',
+                engine_power: '150PS'
+            },
+            {
+                mark: 'Mercedes',
+                model: 'A169',
+                production_year: '2012',
+                engine_power: '112PS'
+            },
+            {
+                mark: 'BMW',
+                model: 'E46',
+                production_year: '2009',
+                engine_power: '173PS'
+            },
+            {
+                mark: 'VW',
+                model: 'Golf',
+                production_year: '2015',
+                engine_power: '103PS'
+            }
+        ])  
+    }
+
     client.close();
 })
 
